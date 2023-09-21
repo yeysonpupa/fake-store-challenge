@@ -1,0 +1,90 @@
+.shop {
+    text-align: center;
+    margin: 20px;
+    background-color: #f8f8f8;
+}
+  
+h1 {
+    font-size: 30px;
+    color: #422e54;
+    margin-bottom: 20px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+.card {
+    padding: 20px;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+  
+.card:hover {
+    transform: scale(1.03);
+}
+  
+.image img {
+    max-width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.details {
+    text-align: left;
+    margin-top: 10px;
+    width: 100%;
+}
+  
+h2 {
+    font-size: 20px;
+    color: #422e54;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #422e54;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+  
+button:hover {
+    background-color: #f8f8f8;
+    border: 1px solid #422e54;
+    color:  #422e54;
+}
+  
+p {
+    font-size: 16px;
+    color: #343434;
+    margin-top: 10px;
+}
+  
+.iniciales {
+    background-color: #422e54; 
+    color: #fff;
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+}
+  
