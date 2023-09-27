@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './shop.css';
+import Navbar from './navbar';
 
 function Shop() {
   const [products, setProducts] = useState([]);
@@ -10,7 +12,7 @@ function Shop() {
     fetch('https://fakestoreapi.com/products')
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error('Ha ocurrido un error');
         }
         return response.json();
       })
@@ -18,7 +20,7 @@ function Shop() {
         setProducts(data);
       })
       .catch((error) => {
-        console.error('Error fetching data:', error);
+        console.error('Ha ocurrido un error', error);
       });
   }, []);
 
@@ -29,14 +31,7 @@ function Shop() {
 
   return (
     <div className="shop">
-      <div className="iniciales">YP</div>
-      <h1>Fake Store</h1>
-      <button onClick={toggleShowAll}>
-        {showAll ? 'Ver Menos' : 'Ver Más'}
-      </button>
-      <p>
-        Se están mostrando {showAll ? products.length : 6} de {products.length} productos
-      </p>
+      <Navbar />
       <div className="products">
         {products.slice(0, showAll ? products.length : 6).map((product) => (
           <div key={product.id} className="card">
@@ -49,11 +44,17 @@ function Shop() {
               <h2>{product.title}</h2>
               <p>Precio: ${product.price}</p>
               <p>Categoría: {product.category}</p>
-              <p>Descripción: {product.description}</p>
+              <Link to={`/products/${product.id}`}>Ver Detalles</Link>
             </div>
           </div>
         ))}
       </div>
+      <button onClick={toggleShowAll}>
+        {showAll ? 'Ver Menos' : 'Ver Más'}
+      </button>
+      <p>
+        Se están mostrando {showAll ? products.length : 6} de {products.length} productos
+      </p>
       <p>
         Autor del ejercicio <a href="https://github.com/yeysonpupa">Yeyson Pulido </a>- 0000222746
       </p>
