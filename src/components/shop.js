@@ -24,7 +24,6 @@ function Shop() {
       });
   }, []);
 
-  // Acción botón
   const toggleShowAll = () => {
     setShowAll(!showAll);
   };
@@ -44,12 +43,12 @@ function Shop() {
               <h2>{product.title}</h2>
               <p>Precio: ${product.price}</p>
               <p>Categoría: {product.category}</p>
-              <Link to={`/products/${product.id}`}>Ver Detalles</Link>
+              <Link to={`/products/${product.id}`} className='button-link'>Ver Detalles</Link>
             </div>
           </div>
         ))}
       </div>
-      <button onClick={toggleShowAll}>
+      <button onClick={toggleShowAll} className='button-ver'>
         {showAll ? 'Ver Menos' : 'Ver Más'}
       </button>
       <p>

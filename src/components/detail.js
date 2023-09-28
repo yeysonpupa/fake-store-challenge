@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './detail.css';
 import Navbar from './navbar';
 
@@ -27,6 +27,14 @@ function ProductDetail() {
     return <div>Cargando...</div>;
   }
 
+  const addToCart = () => {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      const currentCart = JSON.parse(localStorage.getItem('cart')) || [];
+      currentCart.push(product);
+      localStorage.setItem('cart', JSON.stringify(currentCart));
+    }
+  };
+
   return (
     <div className='container'>
       <div className='navbar-container'>
@@ -48,8 +56,8 @@ function ProductDetail() {
             </div>
           </div>
         </div>
-        <button>
-            Añadir al carrito 
+        <button onClick={addToCart} className='cart-button'>
+          <Link to="/cart">Añadir al carrito</Link>
         </button>
       </div>
     </div>

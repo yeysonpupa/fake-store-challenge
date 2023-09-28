@@ -50,8 +50,7 @@ h2 {
     color: #422e54;
     margin: 10px 0;
 }
-
-button {
+.button-ver {
     background-color: #422e54;
     color: #fff;
     border: none;
@@ -62,13 +61,7 @@ button {
     border-radius: 5px;
     transition: background-color 0.3s ease-in-out;
 }
-  
-button:hover {
-    background-color: #f8f8f8;
-    border: 1px solid #422e54;
-    color:  #422e54;
-}
-  
+
 p {
     font-size: 16px;
     color: #343434;

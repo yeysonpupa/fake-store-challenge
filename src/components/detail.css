@@ -52,3 +52,20 @@ p {
     color: #343434;
     margin-top: 10px;
 }
+
+.cart-button {
+    background-color: #422e54;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    margin: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cart-button a {
+    text-decoration: none;
+    color: #fff;
+}
