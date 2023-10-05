@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import './detail.css';
 import Navbar from './navbar';
+import { useAppContext } from '../AppContext';
 
 function ProductDetail() {
   const { id } = useParams();
+  const { dispatch } = useAppContext();
   const [product, setProduct] = useState(null);
 
+  // Fetch
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${id}`)
       .then((response) => {
@@ -32,6 +35,8 @@ function ProductDetail() {
       const currentCart = JSON.parse(localStorage.getItem('cart')) || [];
       currentCart.push(product);
       localStorage.setItem('cart', JSON.stringify(currentCart));
+
+      dispatch({ type: 'ADD_TO_CART', payload: product });
     }
   };
 
@@ -65,4 +70,5 @@ function ProductDetail() {
 }
 
 export default ProductDetail;
+
 

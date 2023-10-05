@@ -81,4 +81,18 @@ p {
     font-weight: bold;
     font-size: 20px;
 }
+
+.filtro {
+    margin-bottom: 20px;
+}
   
+.filtro select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #422e54;
+    width: 200px;
+    cursor: pointer;
+}

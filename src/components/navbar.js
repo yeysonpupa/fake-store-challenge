@@ -12,7 +12,7 @@ function Navbar() {
       </div>
       <ul className="app__navbar-links">
         <Link to="/">Home</Link>
-        <Link to="/cart">Carrito</Link>
+        <Link to="/cart">Carrito 🛒</Link>
       </ul>
     </nav>
   );
