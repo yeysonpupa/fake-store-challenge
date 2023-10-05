@@ -23,14 +23,14 @@
   
 .app__navbar-links {
     list-style: none;
-    padding: 0;
     display: flex;
-    gap: 20px;
-}
+    gap: 20px; 
+    padding: 20px 0; 
+  }
   
-.app__navbar-links a {
+  .app__navbar-links a {
     text-decoration: none;
     color: #422e54;
     font-weight: bold;
     font-size: 18px;
-}
+  }
