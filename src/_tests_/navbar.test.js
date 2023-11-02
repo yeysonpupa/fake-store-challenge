@@ -4,6 +4,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { render, screen } from '@testing-library/react';
 import Navbar from '../components/navbar';
 
+// Prueba unitaria 3
 test('Navbar renderiza las rutas', () => {
   render(
     <MemoryRouter>

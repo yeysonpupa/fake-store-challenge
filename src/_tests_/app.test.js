@@ -3,6 +3,7 @@ import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
 import App from '../App';
 
+// Prueba unitaria 1
 test('La aplicación renderiza correctamente la navbar', () => {
     render(<App />);
 
@@ -10,6 +11,7 @@ test('La aplicación renderiza correctamente la navbar', () => {
     expect(screen.getByRole('navigation')).toHaveClass('navbar')
 });
 
+// Prueba unitaria 2
 test('La aplicación renderiza correctamente los textos', () => {
     render(<App />);
 

@@ -34,3 +34,18 @@
     font-weight: bold;
     font-size: 18px;
   }
+
+.user-data {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #422e54;
+    color: #f8f8f8;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+}
